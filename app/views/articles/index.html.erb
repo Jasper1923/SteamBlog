@@ -31,27 +31,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">
-                        Start Bootstrap
-                    </a>
-                </li>
-                <li>
-                    <a href="#">Homepage</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
-        </div>
+   <%= render 'shared/nav'%>
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
@@ -70,6 +50,9 @@
         <!-- /#page-content-wrapper -->
 
     </div>
+     <div>
+       <%= render 'shared/footer'%>
+       </div>
     <!-- /#wrapper -->
 
     <!-- jQuery -->

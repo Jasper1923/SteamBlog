@@ -1,9 +1,10 @@
-source 'https://rubygems.org'
+source 'https://gems.ruby-china.org'
 
 
 gem 'devise'
 
 gem 'carrierwave'
+gem 'mini_magick', '~> 4.3'
 
 gem 'bootstrap-sass', '~> 3.3.7'
 
