@@ -1,4 +1,6 @@
-<%= form_for(image) do |f| %>
+<br>
+
+<%= form_for(image, html: { class: "", role: 'form'}) do |f| %>
   <% if image.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(image.errors.count, "error") %> prohibited this image from being saved:</h2>
@@ -11,18 +13,16 @@
     </div>
   <% end %>
 
-    <div class="field">
-      <%= f.label :image %><br>
-      <%= f.file_field :image %>
-      <% if f.object.image? %>
-          <%= image_tag f.object.image.thumb.url %>
+  <div class="form-group">
+    <%= f.label :image %><br>
+    <%= f.file_field :image, class: "form-control" %>
 
-      <% end %>
-    </div>
+    <% if f.object.image? %>
+      <%= image_tag f.object.image.thumb.url %>
+    <% end %>
+  </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: 'btn btn-primary' %>
   </div>
 <% end %>
-
-
